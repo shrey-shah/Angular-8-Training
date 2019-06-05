@@ -1,0 +1,14 @@
+<tr>
+        <td>
+            Advanced Search:
+                <select class="form-control">
+                        <option value="0" selected disabled>Select Field</option>
+                        <option *ngFor="let column of tableColumns" value="{{column}}">{{column}}</option>
+                    </select>
+        </td>
+        <td>
+            Enter value: 
+                <input type="text" class="form-control" [(ngModel)]="searchText"><br>
+                <input type="button" value="Search" (click)="isToggleForm()" class="btn btn-success" />
+        </td>
+    </tr>

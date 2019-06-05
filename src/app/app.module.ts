@@ -18,6 +18,7 @@ import { CourseSearchComponent } from './components/searchwithservices/app.cours
 import { SearchComponent } from './components/searchwithservices/app.search.component';
 import { SharedServiceComponent } from './components/sharedservicecomponent/app.sharedservice.component';
 import { SharedModule } from 'src/sharedmodule/app.shared.module';
+import { SharedSearchComponent } from './components/sharedservicecomponent/app.sharedsearch.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { SharedModule } from 'src/sharedmodule/app.shared.module';
     SearchComponent,
     CourseSearchComponent,
     StudentSearchComponent,
-    SharedServiceComponent
+    SharedServiceComponent,
+    SharedSearchComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,7 @@ import { SharedModule } from 'src/sharedmodule/app.shared.module';
     SharedModule
   ],
   providers: [],
-  bootstrap: [SharedServiceComponent],
+  bootstrap: [SharedServiceComponent,SharedSearchComponent],
  // bootstrap: [SearchComponent,CourseSearchComponent,StudentSearchComponent]
 })
 export class AppModule { }

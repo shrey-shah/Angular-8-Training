@@ -10,9 +10,9 @@ export class HttpService {
         this.url = 'http://apiapptrainingservice.azurewebsites.net/api/products';
     }
 
-    getProducts(): Observable<ProductInfo[]> {
-        let resp: Observable<ProductInfo[]>  =null;
-        resp = this.http.get<ProductInfo[]>(this.url);
+    getProducts(): Observable<Array<ProductInfo>> {
+        let resp: Observable<Array<ProductInfo>>  = null;
+        resp = this.http.get<Array<ProductInfo>>(this.url);
         return resp;
     } 
 
