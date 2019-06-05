@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>List of Courses</h1>
+    <div class="container">{{message}}</div>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <td *ngFor="let item of tableColumns">{{item}}</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of courses" (click)="getSelectedCourse(c)">
+                <td *ngFor="let item of tableColumns">{{c[item]}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

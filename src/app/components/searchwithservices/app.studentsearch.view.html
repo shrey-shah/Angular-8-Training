@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>List of Students</h1>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <td *ngFor="let c of tableColumns">{{c}}</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let s of FilteredStudents">
+                <td *ngFor="let c of tableColumns">{{s[c]}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
